@@ -1,0 +1,165 @@
+/* Contenedor principal */
+section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Grid de tarjetas */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.rm-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.rm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+}
+
+/* Imagen */
+.rm-card__media {
+  position: relative;
+}
+
+.rm-card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Chip status */
+.rm-chip {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  background: #e5e7eb;
+}
+
+.rm-chip--alive {
+  background: #10b981;
+  color: white;
+}
+
+/* Body */
+.rm-card__body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Title */
+.rm-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Pills */
+.rm-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rm-pill {
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Datos */
+.rm-card__dl {
+  font-size: 13px;
+}
+
+.rm-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.rm-row dt {
+  font-weight: 600;
+  color: #374151;
+}
+
+.rm-row dd {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Botones */
+.rm-card__actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.rm-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.rm-btn:hover {
+  background: #f3f4f6;
+}
+
+/* Botón principal */
+.rm-btn--primary {
+  background: #2563eb;
+  border: none;
+  color: white;
+}
+
+.rm-btn--primary:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .rm-card__img {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
